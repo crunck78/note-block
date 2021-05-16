@@ -1,0 +1,199 @@
+:root{
+    --header-padding: 16px;
+    --card-padding: 16px;
+    --main-padding: 16px;
+    --color-main-light: lightsteelblue;
+    --header-height: 54px;
+    --main-nav-width-expand: 300px;
+    --main-nav-width-schrinked: 100px;
+    --main-nav-padding-expand: 16px;
+    --main-nav-padding-schrinked: 16px;
+    --note-container-margin: 16px;
+    --color-onhover: gray;
+    --color-selected: gold;
+    --input-padding: 10px;
+}
+
+body{
+    margin: 0;
+    /* background-color: var(--color-main-light); */
+}
+header{
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - var(--header-padding)*2);
+    padding: var(--header-padding);
+    /* background-color: blueviolet; */
+    height: var(--header-height);
+    /* max-height: 300px;
+    overflow-y: auto; */
+    border-bottom: 1px solid black;
+}
+
+.card{
+    border-radius: 16px;
+    height: fit-content;
+    /* background-color: white; */
+}
+
+.search-box{
+    background-color:#f1f3f4;
+    display: flex;
+    min-width: 300px;
+}
+
+main{
+    
+    display: flex;
+    position: relative;
+    top: calc(var(--header-height) + var(--header-padding) * 2);
+    /* padding: var(--main-padding); */
+    /* width: calc(100% - var(--main-padding)*2); */
+    /* height: calc(100vh - var(--main-padding)*2  - var(--header-height) - var(--header-padding)*2); */
+    height: 100%;
+    /* height: calc(100vh - var(--header-height) - var(--header-padding)*2); */
+    
+}
+
+main nav{
+    position: fixed;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: white;
+    transition: all 225ms ease-in-out;
+    padding-top: 6px;
+}
+
+#main-nav-placeholder{
+    transition: all 225ms ease-in-out;
+}
+
+.main-nav-placeholder-expand{
+    /* padding: var(--main-nav-padding-expand); */
+    min-width: var(--main-nav-width-expand);
+}
+
+.main-nav-placeholder-schrinked{
+    /* padding: var(--main-nav-padding-schrinked); */
+    min-width: var(--main-nav-width-schrinked);
+}
+
+.main-nav-expand{
+    /* padding: var(--main-nav-padding-expand); */
+    width: var(--main-nav-width-expand);
+    border-right: 0px solid black;
+    box-shadow: -1px 3px 5px 0px;
+}
+
+.main-nav-schrinked{
+    /* padding: var(--main-nav-padding-schrinked); */
+    width: var(--main-nav-width-schrinked);
+}
+
+.main-nav-expand button{
+    border-radius: 0 25px 25px 0;
+    width: 100%;
+}
+
+#main-nav-btn-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ /* #main-nav-btn-box button{
+    background-color: inherit;
+} */
+
+.selected-main-nav{
+    background-color: var(--color-selected) !important;
+}
+
+.selected-main-nav:hover{
+    background-color: var(--color-selected) !important;
+}
+
+#new-note-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 32px auto 16px auto;
+    border: 0px solid black;
+    box-shadow: 0px 0px 4px 0px;
+    padding: 16px;
+}
+
+#new-text{
+    max-width: -webkit-fill-available; 
+    min-width: -webkit-fill-available;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#main-content{
+    /* flex-grow: 1;
+    display: flex;
+    flex-direction: column; */
+    width: 100%;
+}
+
+#notes-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 32px auto 16px auto;
+    /* max-height: 100%;
+    overflow-y: auto; */
+    /* max-width: 600px; */
+    
+}
+
+.note-container{
+    display: flex;
+    flex-direction: column;
+    margin: var(--note-container-margin);
+    max-width: 240px;
+    min-height: 100px;
+    border: 1px solid black;
+    padding: 6px;
+    transition: all 225ms ease-in-out;
+}
+
+.input-field{
+    border-width: 0;
+    background-color: inherit;
+    padding-top: var(--input-padding);
+    padding-bottom: var(--input-padding);
+}
+
+.input-field:focus-visible{
+    outline: transparent;
+}
+
+.d-none{
+    display: none !important;
+}
+
+button{
+    color: black;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    /* background-color: var(--color-main-light); */
+    background-color: inherit !important;
+    border-width: 0;
+    font-stretch: condensed;
+    transition: all 225ms ease-in-out;
+}
+
+button:hover{
+    opacity: .87;
+    background-color: rgba(95,99,104,0.157)  !important;
+    transition: all 225ms ease-in-out;
+}
