@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Block</title>
     <link rel="stylesheet" href="styles.css">
-    
+
 </head>
 <body>
     <header>
         <button onclick="toggleMainNav()">Menu</button>
-        <div class="search-box card">
-            <button>Search</button>
-            <!-- <img src="" alt="search-btn"> -->
+        <!--TODO OPTIMISE FOR MOBILE-->
+        <div id="search-box" class="card d-none" onfocusin="transitFocusIn(this)" onfocusout="transitFocusOut(this)">
+            <button onclick="" >Search</button>
             <input class="input-field" placeholder="Search" type="text" name="" id="search-text">
         </div>
         <nav>
@@ -35,10 +35,15 @@
                 <span>Notes in Trash are deleted after 7 days.</span>
                 <button id="trash-empty" onclick="emptyTrash()">Empty Trash</button>
             </div>
-            <div id="new-note-box" class="card">
-                <input class="input-field" id="new-title" type="text" placeholder="Title">
-                <textarea class="input-field" id="new-text" type="text" placeholder="Text"></textarea>
-                <button onclick="saveNote()">Save</button>
+            <div id="new-note-box" class="card" onmouseleave="hiddeParentContent()" onmouseenter="showParentContent()">
+                <div class="hiddebar d-none">
+                    <input class="input-field" id="new-title" type="text" placeholder="Title">
+                </div>
+                
+                <textarea class="input-field" id="new-text" type="text" placeholder="Take a Note..."></textarea>
+                <div class="hiddebar d-none">
+                    <button onclick="saveNote()">Save</button>
+                </div>
             </div>
     
             <div id="notes-container">

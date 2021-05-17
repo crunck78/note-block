@@ -116,7 +116,7 @@ function showTrash() {
 
 function generateContainerEmpty(message){
     return `
-    <div>
+    <div class="empty-box">
         <span>${message}</span>
     </div>`;
 }
@@ -162,4 +162,26 @@ function setSelectedMenu(selectedElement){
     const allBtns = Array.from(document.getElementsByTagName("button"));
     allBtns.forEach( btn => btn.classList.remove("selected-main-nav"));
     selectedElement.classList.add("selected-main-nav");
+}
+
+function transitFocusIn(self){
+    self.classList.add("search-focus-in");
+}
+
+function transitFocusOut(self){
+    self.classList.remove("search-focus-in");
+}
+
+function showParentContent(){
+    const parent = document.getElementById("new-note-box");
+    const hiddebarContents = Array.from(document.getElementsByClassName("hiddebar"));
+
+    hiddebarContents.forEach( content => content.classList.remove("d-none"));
+}
+
+function hiddeParentContent(){
+    const parent = document.getElementById("new-note-box");
+    const hiddebarContents = Array.from(document.getElementsByClassName("hiddebar"));
+
+    hiddebarContents.forEach( content => content.classList.add("d-none"));
 }
