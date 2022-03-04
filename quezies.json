@@ -1,0 +1,46 @@
+{
+    "html":{
+       "1":{
+          "question":"Wer hat HTML erfunden?",
+          "answers":[
+             "Robbie Williams",
+             "Lady Gaga",
+             "Tim Berners-Lee",
+             "Justin Bieber"
+          ],
+          "rightAnswer":3
+       },
+       "2":{
+          "question":"Wer hat HTML erfunden?",
+          "answers":[
+             "Robbie Williams",
+             "Lady Gaga",
+             "Tim Berners-Lee",
+             "Justin Bieber"
+          ],
+          "rightAnswer":3
+       }
+    },
+    "css":{
+       "1":{
+          "question":"Wer hat HTML erfunden?",
+          "answers":[
+             "Robbie Williams",
+             "Lady Gaga",
+             "Tim Berners-Lee",
+             "Justin Bieber"
+          ],
+          "rightAnswer":3
+       },
+       "2":{
+          "question":"Wer hat HTML erfunden?",
+          "answers":[
+             "Robbie Williams",
+             "Lady Gaga",
+             "Tim Berners-Lee",
+             "Justin Bieber"
+          ],
+          "rightAnswer":3
+       }
+    }
+ }

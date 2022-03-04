@@ -53,7 +53,7 @@ function showTrashBox(self) {
 function saveNote() {
     let newTitle = document.getElementById("new-title");
     let newText = document.getElementById("new-text");
-    newText.value = newText.value.replace(/\n\r?/g, "<br />");
+    newText.value = newText.value.replace(/\n\r?/g, "<br/>");
     let newNote = createNote(newTitle.value, newText.value);
     newTitle.value = "";
     newText.value = "";
